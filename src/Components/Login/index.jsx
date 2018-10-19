@@ -33,7 +33,7 @@ class Login extends Component {
     fbsConfig
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
+      .then(u => {console.log(u)})
       .catch(error => {
         console.log(error);
       });
