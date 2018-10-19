@@ -20,14 +20,26 @@
     height: 6rem;
 }
 
-.logo{
-    height: 60vmin;
+.all{
     display: flex;
     flex-direction: column;
+}
+
+.logo{
+    height: 60vmin;
     align-content: center;
     justify-content: center;
 }
 
+.lessMg{
+    margin-top: -5rem;
+}
 
+.pass{
+    color: #dd4620;
+    font-size: 2rem; 
+    text-align: right;
+    padding: 3rem;
+}
 
 /*xs={8} xsOffset={2} sm={8} smOffset={4} md={8} mdOffset={5}*/
