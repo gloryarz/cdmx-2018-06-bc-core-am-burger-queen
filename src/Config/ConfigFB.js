@@ -1,11 +1,11 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 const config = {
-  apiKey: "AIzaSyAjJOccmVzGilFQrv4rISTJMxBRn7_Yjiw",
-  authDomain: "reactjssocialmedia.firebaseapp.com",
-  databaseURL: "https://reactjssocialmedia.firebaseio.com",
-  projectId: "reactjssocialmedia",
-  storageBucket: "reactjssocialmedia.appspot.com",
-  messagingSenderId: "544316527350"
+  apiKey: "AIzaSyDcTqS3BHWffd2_6tgT10T3dPOfp0iDWq8",
+  authDomain: "burger-queen-4c40a.firebaseapp.com",
+  databaseURL: "https://burger-queen-4c40a.firebaseio.com",
+  projectId: "burger-queen-4c40a",
+  storageBucket: "burger-queen-4c40a.appspot.com",
+  messagingSenderId: "720266206325"
 };
 
 const fbsConfig = firebase.initializeApp(config);

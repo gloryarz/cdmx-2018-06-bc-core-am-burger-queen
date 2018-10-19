@@ -33,24 +33,26 @@ class Login extends Component {
     fbsConfig
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
+      .then(u => {console.log(u)})
       .catch(error => {
         console.log(error);
       });
   }
 
+  forgottenPass(){
+    alert("Recupera tu password")
+  }
 
   render() {
     return (
       <div className="Login">
         <Grid>
           <Row>
-            <Col 
-            className="logo">
+            <Col className="all logo lessMg">
               <Image src={logo} alt="bee" className="bee" responsive></Image>
             </Col>
           </Row>
-          <Form horizontal>
+          <Form horizontal className="lessMg">
                 <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
                   <FormControl value={this.state.email} onChange={this.handleChange} 
                   type="email" name="email" id="exampleInputEmail1" placeholder="Email" 
@@ -64,9 +66,16 @@ class Login extends Component {
                 </Col>
   
                 <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
-                  <Button type="submit" className="pink" onClick={this.login}>
+                  <Button type="submit" className="pink fontSize" onClick={this.login}>
                     Iniciar Sesión
                   </Button>
+                </Col>
+
+                <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
+                  <p className="all social pass"
+                  onClick={this.forgottenPass}>
+                    ¿Olvidaste tu password?
+                  </p>
                 </Col>
 
             </Form>
