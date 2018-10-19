@@ -64,7 +64,7 @@ class Login extends Component {
                 </Col>
   
                 <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
-                  <Button type="submit" className="pink" onClick={this.login}>
+                  <Button type="submit" className="pink fontSize" onClick={this.login}>
                     Iniciar Sesión
                   </Button>
                 </Col>

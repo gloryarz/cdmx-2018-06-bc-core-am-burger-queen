@@ -1,9 +1,13 @@
+.fontSize{
+    font-size: 2rem;
+}
 .pink {
     background-image: linear-gradient(to right, #ec6a00, #dd4620);
     color: white;
     padding: 1rem;
     width: 100%;
     margin-top: 1rem;
+    height: 6rem;
 }
 
 .social {
@@ -13,7 +17,7 @@
 }
 
 .inputs {
-    height: 4rem;
+    height: 6rem;
 }
 
 .logo{
@@ -24,8 +28,6 @@
     justify-content: center;
 }
 
-.bee{
-    margin-left: 2rem;
-}
+
 
 /*xs={8} xsOffset={2} sm={8} smOffset={4} md={8} mdOffset={5}*/
