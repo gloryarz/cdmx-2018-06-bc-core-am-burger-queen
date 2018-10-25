@@ -21,7 +21,7 @@ class NavBar extends Component {
             <h4>Burger Queen</h4>
           </Col>
           <Col xs={2}>
-            <p onClick={this.logout} className="exit"><i className="fas fa-sign-out-alt"></i></p>
+            <p onClick={this.logout} className="exit"><i className="fas fa-sign-out-alt">LogOut</i></p>
           </Col>
         </Row>
       </Nav>

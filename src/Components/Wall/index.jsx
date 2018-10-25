@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from '../Nav/'
 import { Col, Row, Grid } from 'react-bootstrap';
+import Pedidos from '../Pedidos/';
 
 class Wall extends Component {
 
@@ -9,7 +10,7 @@ class Wall extends Component {
             <div>
             <NavBar />
             <Grid>
-                
+                <Pedidos />
             </Grid>
             </div>
         );

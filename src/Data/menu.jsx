@@ -1,5 +1,4 @@
-{
-    "menu":{
+const Menu = {
         "desayuno": {
             "Café Americano" : 5,
             "Café con Leche" : 7,
@@ -22,5 +21,6 @@
                 "Refresco 750ml" : 10 
             }
         }
-    }
 }
+
+export {Menu};
