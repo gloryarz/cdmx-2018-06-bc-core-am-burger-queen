@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/gloryarz/cdmx-2018-06-bc-core-am-burger-queen/precache-manifest.622b09cb498678f380c23ae59ec763eb.js"
+  "/cdmx-2018-06-bc-core-am-burger-queen/precache-manifest.9f6575212d3f72af5ed3040405facc85.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/gloryarz/cdmx-2018-06-bc-core-am-burger-queen/index.html", {
+workbox.routing.registerNavigationRoute("/cdmx-2018-06-bc-core-am-burger-queen/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
