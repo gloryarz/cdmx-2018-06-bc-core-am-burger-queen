@@ -2,7 +2,7 @@
   "name": "burger-queen-tmp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/gloryarz/cdmx-2018-06-bc-core-am-burger-queen",
+  "homepage": "https://gloryarz.github.io/cdmx-2018-06-bc-core-am-burger-queen/",
   "dependencies": {
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
