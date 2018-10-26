@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from '../Nav/'
-import { Col, Row, Grid } from 'react-bootstrap';
-import Pedidos from '../Pedidos/';
+import {Row, Grid } from 'react-bootstrap';
 import Prueba from '../Prueba/';
 import {Menu} from '../../Data/menu2';
+import Cocina from '../Cocina/'
 
 class Wall extends Component {
     constructor(props){
@@ -19,8 +19,13 @@ class Wall extends Component {
             <div>
             <NavBar />
             <Grid>
-                <Pedidos />
-                <Prueba menu={this.state.menu}/>
+                <Row>
+                    {localStorage.getItem("user") === "NWX6goAu0OTFMB6amLrkSIVxCTr2" ? ( 
+                        <Cocina/>
+                    ) : (
+                        <Prueba menu={this.state.menu}/>   
+                    )}
+                </Row>
             </Grid>
             </div>
         );
