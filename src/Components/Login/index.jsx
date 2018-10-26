@@ -42,7 +42,6 @@ class Login extends Component {
   };
 
   forgottenPass = () => {
-    alert("Recupera tu password");
     fbsConfig
       .auth()
       .sendPasswordResetEmail(this.state.email)
