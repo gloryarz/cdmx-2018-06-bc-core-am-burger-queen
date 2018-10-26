@@ -24,52 +24,81 @@ class Login extends Component {
     };
   }
 
-  handleChange(el) {
+  handleChange = el => {
     this.setState({ [el.target.name]: el.target.value });
-  }
+  };
 
-  login(el) {
+  login = el => {
     el.preventDefault();
     fbsConfig
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
-      .then(u => {})
+      .then(el => {
+        console.log(el);
+      })
       .catch(error => {
         console.log(error);
       });
-  }
+  };
 
+  forgottenPass = () => {
+    fbsConfig
+      .auth()
+      .sendPasswordResetEmail(this.state.email)
+      .then(el => console.log("success", el))
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
       <div className="Login">
         <Grid>
           <Row>
-            <Col 
-            className="logo">
-              <Image src={logo} alt="bee" className="bee" responsive></Image>
+            <Col className="all logo lessMg">
+              <Image src={logo} alt="bee" className="bee" responsive />
             </Col>
           </Row>
-          <Form horizontal>
-                <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
-                  <FormControl value={this.state.email} onChange={this.handleChange} 
-                  type="email" name="email" id="exampleInputEmail1" placeholder="Email" 
-                  className="social inputs"/>
-                </Col>
+          <Form horizontal className="lessMg">
+            <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
+              <FormControl
+                value={this.state.email}
+                onChange={this.handleChange}
+                type="email"
+                name="email"
+                id="exampleInputEmail1"
+                placeholder="Email"
+                className="social inputs"
+              />
+            </Col>
 
-                <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
-                  <FormControl value={this.state.password} onChange={this.handleChange} 
-                  type="password" name="password" id="exampleInputPassword1" placeholder="Password"
-                  className="social inputs"/>
-                </Col>
-  
-                <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
-                  <Button type="submit" className="pink" onClick={this.login}>
-                    Iniciar Sesión
-                  </Button>
-                </Col>
+            <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
+              <FormControl
+                value={this.state.password}
+                onChange={this.handleChange}
+                type="password"
+                name="password"
+                id="exampleInputPassword1"
+                placeholder="Password"
+                className="social inputs"
+              />
+            </Col>
 
-            </Form>
+            <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
+              <Button
+                type="submit"
+                className="pink fontSize"
+                onClick={this.login}
+              >
+                Iniciar Sesión
+              </Button>
+            </Col>
+
+            <Col xs={12} md={8} mdOffset={2} lg={6} lgOffset={3}>
+              <p className="all social pass" onClick={this.forgottenPass}>
+                ¿Olvidaste tu password?
+              </p>
+            </Col>
+          </Form>
         </Grid>
       </div>
     );

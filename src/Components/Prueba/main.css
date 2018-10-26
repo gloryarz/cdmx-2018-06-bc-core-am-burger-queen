@@ -1,0 +1,18 @@
+body{
+    font-size: 20px;
+}
+
+.buttons{
+    width: 100%;
+    padding: 1.5rem;
+    margin: .7rem;
+}
+
+.buttonsMenu{
+    width: 40%;
+    padding: 1.5rem;
+    margin: .7rem;
+    height: 8.2rem;
+    white-space: pre-wrap;
+    background-color: rgb(218, 222, 238);
+}

@@ -18,10 +18,10 @@ class NavBar extends Component {
       <Nav className="bg">
         <Row>
           <Col xs={8} xsOffset={1}>
-            <h4 className="bee">Burger Queen</h4>
+            <h4>Burger Queen</h4>
           </Col>
           <Col xs={2}>
-            <p onClick={this.logout} className="exit"><i className="fas fa-sign-out-alt"></i></p>
+            <p onClick={this.logout} className="exit"><i className="fas fa-sign-out-alt">LogOut</i></p>
           </Col>
         </Row>
       </Nav>
