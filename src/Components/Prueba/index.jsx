@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Button, Col, Table} from 'react-bootstrap';
 import { fbsConfig } from "../../Config/ConfigFB";
 import "firebase/database";
+import "./main.css"
 
 class Prueba extends Component {
   constructor(props) {
@@ -48,15 +49,16 @@ class Prueba extends Component {
     render() {
         const menuDesayuno = this.props.menu.desayunos.map(dish => {
           return (
-              <Button bsSize="large" key={dish.id} onClick={() => this.probando({dish})}>{dish.food}</Button>
+              <Button bsSize="large" key={dish.id} className="buttonsMenu" onClick={() => this.probando({dish})}>{dish.food}</Button>
           );
         });
 
         const menuComida = this.props.menu.comida.map(dish => {
           return (
-            <Button bsSize="large" key={dish.id} onClick={() => this.probando({dish})}>{dish.food}</Button>
+            <Button bsSize="large" key={dish.id} className="buttonsMenu" onClick={() => this.probando({dish})}>{dish.food}</Button>
           );
         });
+
 
     
         return (
@@ -90,13 +92,13 @@ class Prueba extends Component {
                       Total
                     </td>
                     <td>
-                      {this.state.count}
+                      ${this.state.count}
                     </td>
                   </tr>
                 </tbody>
               </Table>
-              <Button onClick={this.cancel}>Cancelar</Button>
-              <Button onClick={this.addPost}>Enviar</Button>
+              <Button onClick={this.cancel} bsStyle="danger" bsSize="large" className="buttons">Cancelar</Button>
+              <Button onClick={this.addPost} bsStyle="success" bsSize="large" className="buttons">Enviar</Button>
             </Col>
           </div>
         );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Col, Well, Row, Button} from 'react-bootstrap';
-
+import './main.css';
 
 class Ordenes extends Component {
     constructor(props){
@@ -18,23 +18,23 @@ class Ordenes extends Component {
 
     render() { 
         return (
-            <Col xs={12} md={6} lg={4}>
+            <Col xs={12} md={6} lg={4} className="mar">
               <Well bsSize="large">
                 <Row>
                   <Col xs={8}>
-                    <h4 className="">{this.props.name === 'null' ? 
-                    (this.props.mail) : (this.props.name)
-                  }</h4>
+                    <h4 className="">{
+                    this.props.mail
+                    }</h4>
                     <p className="">
                       {this.props.date} {this.props.hour}
                     </p>
                   </Col>
                   <Col xs={10}>
-                    <p className="">{this.props.postContent}</p>
+                    <p className="order">{this.props.postContent}</p>
                   </Col>
                     <Col xs={10}>
                       <Button onClick={() => this.handleRemovePost(this.postId)}>
-                        <i className="fas fa-trash" />
+                        <i class="far fa-thumbs-up"></i>
                       </Button>
                     </Col>
                 </Row>
